@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors */
+  --primary: #d4af37;
+  --primary-dark: #b8860b;
+  --accent: #2ecc71;
+  --accent-light: #27ae60;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --gray: #e8e8e8;
+  --dark-gray: #333333;
+  --text-dark: #2c3e50;
+
+  /* Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-accent: #e8f8f5;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--light-gray) 0%, var(--bg-accent) 100%);
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  color: var(--white);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(46, 204, 113, 0.2);
+}
+
+.header-content {
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: 0.95;
+}
+
+.description {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Main Content */
+.main-content {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+/* Added menu section styling for multiple menu displays */
+.menu-section {
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid var(--gray);
+}
+
+.menu-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 30px;
+  padding-bottom: 0;
+}
+
+.menu-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ingredients-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+}
+
+.ingredients-table thead {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  color: var(--white);
+}
+
+.ingredients-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.ingredients-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--gray);
+  font-size: 0.95rem;
+}
+
+.ingredients-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.ingredients-table tbody tr:hover {
+  background-color: var(--bg-accent);
+}
+
+.ingredients-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Total Calories */
+.total-calories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.calories-card {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  padding: 25px 40px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+  animation: pulse 0.6s ease-out;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.calories-icon {
+  font-size: 2rem;
+}
+
+.calories-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.total {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Nutrition Info */
+.nutrition-info {
+  background: var(--bg-accent);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+  margin-top: 30px;
+}
+
+.info-text {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .header {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .main-content {
+    padding: 25px 20px;
+  }
+
+  .menu-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .ingredients-table th,
+  .ingredients-table td {
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+
+  .calories-card {
+    padding: 20px 30px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .calories-text {
+    font-size: 1.1rem;
+  }
+
+  .total {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    padding: 20px 15px;
+  }
+
+  .menu-title {
+    font-size: 1.1rem;
+  }
+
+  .ingredients-table th,
+  .ingredients-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+
+  .calories-card {
+    padding: 15px 20px;
+  }
+
+  .calories-icon {
+    font-size: 1.5rem;
+  }
+
+  .calories-text {
+    font-size: 1rem;
+  }
+
+  .total {
+    font-size: 1.2rem;
+  }
+}
